@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+  db:
+      image: postgres
+      restart: always
+      environment:
+        POSTGRES_PASSWORD: passw0rd
+        POSTGRES_USER: postgres
+        POSTGRES_DB: exchange_db
+    
+  server:
+    build: ./src
+    command: bash -c "./testserver.sh"
+    volumes:
+      - ./src:/code
+    expose:
+      - '5432'
+    ports:
+      - '12345:12345'
+    depends_on:
+      - db

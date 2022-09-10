@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transactions id="2">
+  <order sym="AAA" amount="100" limit="90"/>  
+  <order sym="BBB" amount="-20" limit="80"/>   
+  <order sym="CCC" amount="60" limit="70"/>  
+</transactions>

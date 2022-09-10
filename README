@@ -1,0 +1,22 @@
+How to Run:
+ - Using ThreadPool:
+ 1. Go to server.cpp, make sure the global variable is set to 1.  
+   -> #define THREAD_POOL 1 and save it.
+
+ - Using Multi Thread:
+ 1. Go to server.cpp, make sure the global variable is set to 0.  
+   -> #define THREAD_POOL 0 and save it. 
+ 
+ 2. For server side, you can change # of cores of CPU in testserver.sh in src directory:
+   $ taskset --cpu-list 0 ./server  //running 1 core
+   $ taskset --cpu-list 0-1 ./server  //running 2 core
+   $ taskset --cpu-list 0-3 ./server  //running 4 core
+
+ 3. For client side:
+   - You can directly run script by:
+      $ chmod u+r+x testclient.sh
+      $ ./testclient.sh
+   // Changing threads number can be easily modified in testclient.sh
+   - Or you can test .xml separately by:
+      single-thread: $ ./client example.xml
+      multi-thread:  $ ./client example.xml #ofThreads

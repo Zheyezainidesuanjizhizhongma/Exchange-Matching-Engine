@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transactions id="2">
+  <order sym="AAA" amount="-25" limit="50"/>
+  <order sym="BBB" amount="15" limit="100"/>
+  <order sym="CCC" amount="-20" limit="20"/>  
+  <query id="5"/>
+</transactions>

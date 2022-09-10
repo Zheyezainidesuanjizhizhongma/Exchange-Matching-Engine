@@ -1,0 +1,5 @@
+1. We first thought money deducted from buyer's account is left unchanged, but after checking the notion, we corrected the value of money by giving refund to buyer's account when the execution price is lower than the buyer's limit price.
+
+2. We improved the response for inquiring about the executed order because previously when inquiring about the executed order, the shares are present as the absolute value, but it's hard to tell if the account bought or sold the shares at the executed price. So we add a sign to differentiate between the buyer and the seller for the executed amount.
+
+3. We did not consider that it should not be an execution order that the same account buys and sells their own amount. After discussion, we exclude this this condition by checking that the buyer account ID and the seller account ID should not be the same in the execution order.
